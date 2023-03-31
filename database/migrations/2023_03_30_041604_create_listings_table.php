@@ -12,9 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('listings', function (Blueprint $table) {
+
+            $table->id();
+            $table->timestamps();
             $table->unsignedBigInteger('beds');
-            $table->unsignedBigInteger('bath');
-            $table->unsignedBigInteger('area');
+            $table->unsignedBigInteger('baths');
+            $table->unsignedSmallInteger('area');
 
             $table->tinyText('city');
             $table->tinyText('code');
@@ -32,8 +35,8 @@ return new class extends Migration
     {
         // Schema::dropIfExists('listings');
 
-        Schema::dropColumns('', [
-            'beds', 'bath', 'area', 'city', 'code', 'street', 'street_nr', 'price'
+        Schema::dropColumns('listings', [
+            'beds', 'baths', 'area', 'city', 'code', 'street', 'street_nr', 'price'
         ]);
     }
 };
