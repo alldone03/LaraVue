@@ -12,7 +12,7 @@ class ListingController extends Controller
      */
     public function index()
     {
-        return inertia('Index/Index', ['listings' => Listing::all()]);
+        return inertia('Listing/Index', ['listings' => Listing::all()]);
     }
 
     /**
