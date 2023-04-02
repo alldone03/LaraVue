@@ -12,6 +12,8 @@ class ListingController extends Controller
      */
     public function index()
     {
+        // $message = session('success');
+        // dd($message);
         return inertia('Listing/Index', ['listings' => Listing::all()]);
     }
 
@@ -33,7 +35,7 @@ class ListingController extends Controller
         // $listing->save();
 
         Listing::create($request->all());
-        return redirect()->route("listing.index")->with('success', 'Listing was created');
+        return redirect()->route("listing.index")->with(['success' => "Listing was created $request->beds"]);
         // dd(request()->beds);
     }
 
