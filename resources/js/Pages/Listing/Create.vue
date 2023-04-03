@@ -62,6 +62,8 @@ import { useForm } from '@inertiajs/vue3'
 
 
 
+
+
 const form = useForm({
   beds:0,
   baths:0,
@@ -74,7 +76,8 @@ const form = useForm({
 })
 
 
-const create = () => form.post('/listing')
+// eslint-disable-next-line no-undef
+const create = () => form.post(route('listing.store'))
 
 
 
