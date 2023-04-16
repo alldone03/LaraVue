@@ -5,7 +5,14 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 
+
+
 export default defineConfig({
+  server: {
+    hmr: {
+      host: '192.168.1.3',
+    },
+  },
   plugins: [
     laravel({
       input: ['resources/css/app.css', 'resources/js/app.js'],
@@ -20,6 +27,7 @@ export default defineConfig({
       },
     ),
   ],
+
   resolve:{
     alias:{
 
