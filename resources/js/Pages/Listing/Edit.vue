@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="update">
-    <div>
+    <div >
       <div>
         <label for="">Beds</label>
         <input id="" v-model.number="form.beds" type="text" name="" />

@@ -3,14 +3,14 @@
 
   <!-- <div>The Page With Time {{ timer }}</div> -->
   <!-- <div v-if="page.props.value." class="" /> -->
-  <header class="border-b border-gray-200 dark:border-gray-700 bg-white text-gray-800 w-full">
-    <div class="container mx-auto">
+  <header class="border-b border-gray-200 dark:border-gray-700 bg-white dark dark:bg-gray-900  dark:text-white text-gray-800 w-full">
+    <div class="container mx-auto ">
       <nav class="p-4 flex items-center justify-between">
         <div class="text-lg font font-medium">
           <Link :href="route('listing.index')">Listings</Link>
         </div>
         <div class="text-xl text-indigo-600 dark:text-indigo-600 border-none font-bold text-center"><Link :href="route('listing.index')">Larazillow</Link></div>
-        <div class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium p-2 rounded-md text-lg text-center"><Link :href="route('listing.create')">+ New Listing</Link></div>
+        <div class="btn-primary"><Link :href="route('listing.create')">+ New Listing</Link></div>
       </nav>
     </div>
   </header>

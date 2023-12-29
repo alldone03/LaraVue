@@ -10,7 +10,7 @@ import path from 'path'
 export default defineConfig({
   server: {
     hmr: {
-      host: '192.168.1.3',
+      host: 'localhost',
     },
   },
   plugins: [
